@@ -148,7 +148,7 @@ export default function HomePage() {
         <div className="w-full h-full absolute bg-white/80" />
 
         <div className="mt-25 justify-items-center flex justify-self-center">
-          <img src="/bingetGroupLogo.png" alt="Company Logo" className="h-30 w-min z-[10]" />
+          <img src="/logo.png" alt="Company Logo" className="h-30 w-min z-[10]" />
           <h1 style={{ color: 'oklch(0.16 0.05 139.95)' }} className="hidden md:block text-2xl md:text-3xl font-bold drop-shadow-md w-min text-right">
             <div className='text-[80px]'>
               BINGET

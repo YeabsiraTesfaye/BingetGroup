@@ -34,7 +34,7 @@ export default function Header() {
           setActive('Home')
           router.push('/')
         }
-         } className="text-2xl font-bold text-gray-900 flex cursor-pointer"><img src="/bingetGroupLogo.png" width={50} />BINGET Group</h1>
+         } className="text-2xl font-bold text-gray-900 flex cursor-pointer"><img src="/logo.png" width={50} />BINGET Group</h1>
         <nav className="hidden md:flex space-x-6 relative">
           {navItems.map((item) =>
             item.name === "Divisions" ? (
