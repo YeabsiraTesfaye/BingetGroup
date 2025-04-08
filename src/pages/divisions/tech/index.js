@@ -19,14 +19,16 @@ const branches = [
 
 const sections = {
   hero: {
-    title: "Welcome to BINGET Tech",
-    subtitle: "Empowering industries, transforming lives.",
-    image: "/bg.jpg",
+    title: "BINGET Tech",
+    subtitle: "Binget Tech is a technology powerhouse, developing cuttingedge financial solutions tailored for emerging markets. Our software products empower financial institutions with costeffective, scalable, and highly secure digital solutions that drive economic inclusion",
+    image: "/tech.png",
   },
   about: {
     title: "Our Company",
-    content:
-      "Binget Tech is a technology powerhouse, developing cutting edge financial solutions tailored for emerging markets. Our software products empower financial institutions with costeffective, scalable, and highly secure digital solutions that drive economic inclusion.",
+    contents: [
+      "Binget Tech is the technology division of Binget Group, a diversified private limited company established in 2018 in Ethiopia. Initially focused on import and export activities, Binget Group expanded into the fintech sector following the National Bank of Ethiopia's directive in April 2020, which permitted non-bank entities to offer e-payment services. This strategic move led to the creation of Binget Tech, aiming to provide innovative digital financial solutions to enhance financial inclusion in Ethiopia",
+      "Binget Tech's commitment to technological innovation and financial inclusion is evident in its efforts to provide secure, efficient, and user-friendly digital financial services. By leveraging advanced technology and strategic partnerships, Binget Tech aims to play a pivotal role in transforming Ethiopia's financial landscape and promoting economic growth."
+    ]
   },
   products: {
     title: "Our Products",
@@ -40,13 +42,13 @@ const sections = {
   services: {
     title: "What We Offer",
     items: [
-      {name:'IT Consulting', description:'Expert guidance on IT strategy, digital transformation, and system integration. Optimizing business processes with the latest technology solutions.'},
-      {name:'Financial System', description:'Core Banking Solutions Secure, scalable banking and microfinance systems for seamless financial operations. Mobile Money Solutions – Digital payments, mobile wallets, and financial inclusion services.'},
-      {name:'Infrastructure Service', description:'Robust IT infrastructure, including cloud computing, networking, and data center solutions. High-performance, secure, and scalable enterprise IT support.'},
-      {name:'SMS and USSD Gateway', description:'Reliable messaging solutions for businesses, enabling customer engagement via SMS & USSD. Seamless integration with telecom operators for secure and fast communication.'},
-      {name:'Enterprise Resource Planing(ERP)', description:'Streamlined business operations with custom ERP solutions. Integration of finance, HR, supply chain, and other core processes.'},
-      {name:'Software Development', description:'Custom software solutions tailored to meet business needs. Agile development, cloud-based applications, and enterprise software.'},
-      
+      { name: 'IT Consulting', description: 'Expert guidance on IT strategy, digital transformation, and system integration. Optimizing business processes with the latest technology solutions.' },
+      { name: 'Financial System', description: 'Core Banking Solutions Secure, scalable banking and microfinance systems for seamless financial operations. Mobile Money Solutions – Digital payments, mobile wallets, and financial inclusion services.' },
+      { name: 'Infrastructure Service', description: 'Robust IT infrastructure, including cloud computing, networking, and data center solutions. High-performance, secure, and scalable enterprise IT support.' },
+      { name: 'SMS and USSD Gateway', description: 'Reliable messaging solutions for businesses, enabling customer engagement via SMS & USSD. Seamless integration with telecom operators for secure and fast communication.' },
+      { name: 'Enterprise Resource Planing(ERP)', description: 'Streamlined business operations with custom ERP solutions. Integration of finance, HR, supply chain, and other core processes.' },
+      { name: 'Software Development', description: 'Custom software solutions tailored to meet business needs. Agile development, cloud-based applications, and enterprise software.' },
+
     ],
   },
   unique: {
@@ -72,7 +74,7 @@ const sections = {
 
 
 export default function CompanyProfilePage() {
-const router = useRouter()
+  const router = useRouter()
 
   const [expandedProduct, setExpandedProduct] = useState(null);
   const [center, setCenter] = useState({ lat: 9.03, lng: 38.74, });
@@ -93,46 +95,42 @@ const router = useRouter()
   };
   return (
     <div className="font-sans text-gray-800">
-      <section className="bg-cover bg-center h-screen relative" style={{ backgroundImage: `url(${sections.hero.image})` }}>
-        <div className="absolute inset-0 bg-white/80 flex flex-col justify-center items-center text-center px-4">
-          <motion.h1
-            className="text-black text-5xl font-bold mb-4"
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+      <section style={{ alignContent: 'center' }} className="keen-slider bg-white w-full lg:h-screen sm:h-[10%] bg-['/bg2.jpg']">
+        <div className="keen-slider__slide flex flex-col md:flex-row items-center justify-center p-10 gap-8">
+          <motion.img
+            src={sections.hero.image}
+            alt={sections.hero.title}
+            className="w-full md:w-1/2 h-64 object-cover rounded-2xl shadow-xl"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.div
+            className="text-center md:text-left"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
           >
-            {sections.hero.title}
-          </motion.h1>
-          <motion.p
-            className="text-black text-lg max-w-xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            {sections.hero.subtitle}
-          </motion.p>
-          
-          <motion.p
-            className="text-black text-lg max-w-xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-             <button
-                      onClick={() => router.push('https://binget-tech-website-walletbirr1.vercel.app')}
-                      className="text-white cursor-pointer bg-blue-900 rounded-sm p-4"
-                    >
-                      Visit Website
-                    </button>
-          </motion.p>
+            <h2 className="text-4xl font-bold mb-2">{sections.hero.title}</h2>
+            <p className="mb-4 text-lg text-gray-600">{sections.hero.subtitle}</p>
+            <button
+              onClick={() => window.open('https://binget-tech-website-walletbirr1.vercel.app', '_blank', 'noopener,noreferrer')}
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
+            >
+              Visit Website
+            </button>
+          </motion.div>
         </div>
       </section>
-      <section className=" px-4 bg-white">
+      <section className=" px-4 bg-gray-100">
         <AnimatedSection title={sections.about.title}>
-          <p className="max-w-3xl mx-auto text-center text-lg">{sections.about.content}</p>
+          {sections.about.contents.map(x => (
+            <p className="max-w-3xl mx-auto text-justify text-lg mb-2">{x}</p>
+
+          ))}
         </AnimatedSection>
       </section>
-      <section className="py-16 px-4 bg-gray-100">
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -147,7 +145,7 @@ const router = useRouter()
               >
                 <div
                   key={product.name}
-                  className="bg-white rounded-lg overflow-hidden  duration-300"
+                  className="bg-gray-100 shadow-lg rounded-lg overflow-hidden  duration-300"
                 >
                   <img
                     src={product.image}

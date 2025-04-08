@@ -30,7 +30,7 @@ export default function Footer() {
             <li className="cursor-pointer" onClick={()=>router.push('/projects/mobileMoney')}>BINGET Automotive</li>
             <li className="cursor-pointer" onClick={()=>router.push('/projects/rideHailing')}>GY Realestate</li>
             <li className="cursor-pointer" onClick={()=>router.push('/projects/coreBanking')}>BINGET TEch</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>Import/Export</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>Export</li>
             <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>Cement</li>
             <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>BINGET Mining</li>
             <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>YER Security</li>
@@ -39,14 +39,14 @@ export default function Footer() {
 
         {/* Services Section */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 ">Services</h3>
+          <h3 className="text-lg font-semibold text-gray-900 ">Investments</h3>
           <ul className="mt-2 space-y-2 text-sm text-gray-700 ">
-            <li>Android App Development</li>
-            <li>iOS App Development</li>
-            <li>DevOps Services</li>
-            <li>IT Consulting</li>
-            <li>Cyber Security Services</li>
-            <li>Web Designing Services</li>
+            <li>Manufacturing and Assembly</li>
+            <li>Realestate</li>
+            <li>Technology</li>
+            <li>Export</li>
+            <li>Cement Production</li>
+            <li>Mining</li>
           </ul>
         </div>
 

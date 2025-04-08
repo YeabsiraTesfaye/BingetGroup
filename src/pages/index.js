@@ -13,8 +13,8 @@ const divisions = [
   {
     id: 'automotive',
     path: '/divisions/automotive',
-    title: 'BINGET Manufacture and Assembly',
-    description: ' Binget Manufacture and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.',
+    title: 'BINGET Manufacturing and Assembly',
+    description: ' Binget Manufacturing and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.',
     image: '/automotive.jpg',
     bgColor: 'oklch(0.16 0.05 139.95)',
     features: [
@@ -281,7 +281,7 @@ export default function HomePage() {
           whileInView={{scale:1, opacity:1, x: 0}}
         >
           <div
-            style={{ backgroundColor: div.bgColor }}
+            style={{ backgroundColor: div.bgColor, height:350 }}
             className="w-full flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-lg"
           >
             <div className="w-full lg:w-1/2 p-6">
@@ -319,7 +319,7 @@ export default function HomePage() {
           initial={{opacity:0, y:-50}}
           whileInView={{opacity:1, y: 0}}
         >
-          <h2 className="text-4xl font-bold mb-4 ">Major Features</h2>
+          <h2 className="text-4xl font-bold mb-4 ">Major Investments</h2>
           </motion.div>
 
 
@@ -367,7 +367,7 @@ export default function HomePage() {
                 <BsCodeSlash className="w-14 h-14 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Technology</h3>
                 <p className="text-gray-700 ">
-                  delivers cutting-edge digital solutions including core banking, mobile money , and ERP systems.
+                  Delivers cutting-edge digital solutions including core banking, mobile money , and ERP systems.
                 </p>
               </div>
             </motion.div>
@@ -397,7 +397,7 @@ export default function HomePage() {
                 <BsBuilding className="w-14 h-14 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Cement Production</h3>
                 <p className="text-gray-700 ">
-                  upcoming investment poised to transform Ethiopia's construction industry, contributing greatly to the country's construction boom and overall economic development.
+                  Upcoming investment poised to transform Ethiopia's construction industry, contributing greatly to the country's construction boom and overall economic development.
                 </p>
               </div>
             </motion.div>
@@ -411,7 +411,7 @@ export default function HomePage() {
                 <BsMinecart className="w-14 h-14 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Mining</h3>
                 <p className="text-gray-700 ">
-                  dedicated to shaping the future of mining through sustainability, innovation, and community growth. We deliver high-quality resources while protecting the environment and supporting local communities.
+                  Dedicated to shaping the future of mining through sustainability, innovation, and community growth. We deliver high-quality resources while protecting the environment and supporting local communities.
                 </p>
               </div>
             </motion.div>
