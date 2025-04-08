@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
@@ -24,28 +24,57 @@ const divisions = [
 export default function Header() {
   const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [divisionsOpen, setDivisionsOpen] = useState(false); // for mobile
+  const [divisionsOpen, setDivisionsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const router = useRouter();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white/70 shadow-md fixed top-0 w-full z-50">
+    <motion.header
+      initial={{ y: 0 }}
+      animate={{ y: isVisible ? 0 : -100 }}
+      transition={{ duration: 0.3 }}
+      className="bg-white/70 shadow-md fixed top-0 w-full z-50 backdrop-blur-md"
+    >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <h1 onClick={()=>{
-          setActive('Home')
-          router.push('/')
-        }
-         } className="text-2xl font-bold text-gray-900 flex cursor-pointer"><img src="/logo.png" width={50} />BINGET Group</h1>
+        <h1
+          onClick={() => {
+            setActive("Home");
+            router.push("/");
+          }}
+          className="text-2xl font-bold text-gray-900 flex cursor-pointer"
+        >
+          <img src="/logo.png" width={50} />
+          BINGET Group
+        </h1>
+
+        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 relative">
           {navItems.map((item) =>
             item.name === "Divisions" ? (
-              <div
-                key={item.name}
-                className="relative group"
-              >
+              <div key={item.name} className="relative group">
                 <button
                   className={clsx(
                     "text-gray-600 hover:text-blue-600 font-medium transition flex items-center gap-1",
-                    active === item.name && "text-blue-600 border-b-2 border-blue-600 pb-1"
+                    active === item.name &&
+                      "text-blue-600 border-b-2 border-blue-600 pb-1"
                   )}
                 >
                   {item.name}
@@ -78,7 +107,8 @@ export default function Header() {
                 }}
                 className={clsx(
                   "text-gray-900 hover:text-blue-600 font-medium transition",
-                  active === item.name && "text-blue-600 border-b-2 border-blue-600 pb-1"
+                  active === item.name &&
+                    "text-blue-600 border-b-2 border-blue-600 pb-1"
                 )}
               >
                 {item.name}
@@ -153,7 +183,8 @@ export default function Header() {
                   }}
                   className={clsx(
                     "text-gray-600 hover:text-blue-600 font-medium transition",
-                    active === item.name && "text-blue-600 border-b-2 border-blue-600 pb-1"
+                    active === item.name &&
+                      "text-blue-600 border-b-2 border-blue-600 pb-1"
                   )}
                 >
                   {item.name}
@@ -163,6 +194,6 @@ export default function Header() {
           </div>
         </motion.div>
       )}
-    </header>
+    </motion.header>
   );
 }

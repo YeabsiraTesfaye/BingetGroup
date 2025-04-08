@@ -176,17 +176,6 @@ export default function About() {
                     ))}
                 </div>
             </section>
-
-
-
-            {/* Call-to-Action (CTA) */}
-            <section className="bg-[#B49C68] text-white text-center py-12">
-                <h2 className="text-3xl font-bold">Join Us in Our Journey</h2>
-                <p className="mt-4">Be part of something great. Let's build the future together.</p>
-                <button className="mt-6 px-6 py-3 bg-white text-[#B49C68] font-semibold rounded-lg hover:bg-gray-200 transition">
-                    Contact Us
-                </button>
-            </section>
         </div>
     );
 }

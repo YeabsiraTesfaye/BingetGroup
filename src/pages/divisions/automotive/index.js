@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ContactUs from "@/components/contactUs";
 import { motion } from "framer-motion";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
@@ -18,9 +18,9 @@ const branches = [
 
 const sections = {
     hero: {
-        title: "Welcome to BINGET Automotive",
-        subtitle: "Empowering industries, transforming lives.",
-        image: "/bg.jpg",
+        title: "BINGET Automotive",
+        subtitle: "Binget Manufacture and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.",
+        image: "/automotive.jpg",
     },
     about: {
         title: "Our Company",
@@ -89,33 +89,33 @@ const sections = {
                     { label: "Maximum Torque", value: "15.5 Nm @ 6500 rpm" },
                     { label: "Clutch Type", value: "Wet, Multi-plate" },
                     { label: "Fuel Supply", value: "Carburettor" },
-                  
+
                     // Chassis Features
                     { label: "Frame Type", value: "Double Cradle" },
                     { label: "Suspension (Front)", value: "Telescopic" },
                     { label: "Suspension (Rear)", value: "Mono Tube Inverted Gas" },
-                  
+
                     // Wheel and Tire
                     { label: "Tire Type", value: "Tubeless" },
                     { label: "Wheel Type", value: "Alloy Wheel" },
                     { label: "Tire Size (Front)", value: "90/90 × 17" },
                     { label: "Tire Size (Rear)", value: "110/80 × 17" },
-                  
+
                     // Brake Features
                     { label: "Brake (Front)", value: "Disc" },
                     { label: "Brake (Rear)", value: "Disc" },
                     { label: "Disc Size (Front)", value: "270 mm" },
                     { label: "Disc Size (Rear)", value: "200 mm" },
-                  
+
                     // Fuel Tank
                     { label: "Fuel Tank Capacity", value: "16 L" },
                     { label: "Reserve Tank Capacity", value: "2.5 L" },
-                  
+
                     // Display / Electricals
                     { label: "Speedometer", value: "Analog + Digital" },
                     { label: "Head Lamp", value: "Halogen, LED" },
                     { label: "Battery", value: "12 V" },
-                  
+
                     // Dimensions
                     { label: "Length", value: "2085 mm" },
                     { label: "Width", value: "730 mm" },
@@ -125,7 +125,7 @@ const sections = {
                     { label: "Seat Height", value: "790 mm" },
                     { label: "Kerb Weight", value: "137 kg" },
                     { label: "Dry Weight", value: "130 kg" },
-                  
+
                     // General
                     { label: "Brand", value: "TVS" },
                     { label: "Model Name", value: "Apache RTR 180 Disc with ABS" },
@@ -134,7 +134,7 @@ const sections = {
                     { label: "Segment", value: "Sport" },
                     { label: "Color", value: "Blue" },
                     { label: "Maximum Speed", value: "124 kmph" },
-                  ]
+                ]
             },
             {
                 name: 'Lifan Two Wheeler 110cc', image: '/lifan110.png',
@@ -191,6 +191,7 @@ export default function CompanyProfilePage() {
     const toggleDescription = (index) => {
         setExpandedProduct(prev => (prev === index ? null : index));
     };
+    const ref = useRef()
     const listItemVariants = {
         hidden: { opacity: 0, y: 60 },
         visible: (index) => ({
@@ -204,32 +205,42 @@ export default function CompanyProfilePage() {
     };
     return (
         <div className="font-sans text-gray-800">
-            <section className="bg-cover bg-center h-screen relative" style={{ backgroundImage: `url(${sections.hero.image})` }}>
-                <div className="absolute inset-0 bg-white/80 flex flex-col justify-center items-center text-center px-4">
-                    <motion.h1
-                        className="text-black text-5xl font-bold mb-4"
-                        initial={{ opacity: 0, y: -30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+            <section style={{alignContent:'center'}} className="keen-slider bg-white w-full lg:h-screen sm:h-[10%] bg-['/bg2.jpg']">
+
+            {/* <section className="keen-slider bg-gray-100 w-full lg:h-screen sm:h-[10%]"> */}
+                
+                <div className="keen-slider__slide flex flex-col md:flex-row items-center justify-center p-10 gap-8">
+                    <motion.img
+                        src={sections.hero.image}
+                        alt={sections.hero.title}
+                        className="w-full md:w-1/2 h-64 object-cover rounded-2xl shadow-xl"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                    />
+                    <motion.div
+                        className="text-center md:text-left"
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.6 }}
                     >
-                        {sections.hero.title}
-                    </motion.h1>
-                    <motion.p
-                        className="text-black text-lg max-w-xl"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                    >
-                        {sections.hero.subtitle}
-                    </motion.p>
+                        <h2 className="text-4xl font-bold mb-2">{sections.hero.title}</h2>
+                        <p className="mb-4 text-lg text-gray-600">{sections.hero.subtitle}</p>
+                        <button
+                            onClick={() => ref.current.scrollIntoView({ behavior: 'smooth' })}
+                            className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
+                        >
+                            Get Started
+                        </button>
+                    </motion.div>
                 </div>
             </section>
-            <section className=" px-4 bg-white">
+            <section ref={ref} className=" px-4 bg-gray-100">
                 <AnimatedSection title={sections.about.title}>
                     <p className="max-w-3xl mx-auto text-center text-lg">{sections.about.content}</p>
                 </AnimatedSection>
             </section>
-            <section className="py-16 px-4 bg-gray-100">
+            <section className="py-16 px-4 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Products</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -244,7 +255,7 @@ export default function CompanyProfilePage() {
                             >
                                 <div
                                     key={product.name}
-                                    className="bg-white rounded-lg overflow-hidden  duration-300"
+                                    className="bg-gray-100 shadow-lg rounded-lg overflow-hidden  duration-300"
                                 >
                                     <img
                                         src={product.image}
@@ -298,7 +309,7 @@ export default function CompanyProfilePage() {
                     </div>
                 </div>
             </section>
-            <section className="py-16 px-4 bg-white">
+            <section className="py-16 px-4 bg-gray-100">
                 {/* Services */}
                 <AnimatedSection title={sections.services.title}>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -321,7 +332,7 @@ export default function CompanyProfilePage() {
 
                 <h2 className="text-3xl font-bold text-center text-gray-900 py-10">Location</h2>
 
-                <div className="flex flex-col lg:flex-row overflow-hidden shadow-lg bg-gray-400">
+                <div className="flex flex-col lg:flex-row overflow-hidden shadow-lg bg-gray-200">
 
                     <div className="w-full lg:w-1/2">
 
@@ -348,8 +359,8 @@ export default function CompanyProfilePage() {
                                         }
                                         }
                                     >
-                                        <td className="px-6 py-4 text-white font-medium">{div.name}</td>
-                                        <td className="px-6 py-4 text-white">{div.descriptinon}</td>
+                                        <td className="px-6 py-4 text-black font-medium">{div.name}</td>
+                                        <td className="px-6 py-4 text-black">{div.descriptinon}</td>
                                     </motion.tr>
                                 ))}
                             </tbody>

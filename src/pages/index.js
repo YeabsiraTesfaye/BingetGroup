@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { FaCheckCircle, FaCode, FaHeadset, FaMoneyBill, FaUsers } from "react-icons/fa";
-import { BsBoxSeamFill, BsCodeSlash, BsPerson } from "react-icons/bs";
-import { RiEmotionHappyLine, RiUserStarFill } from "react-icons/ri";
+import { BsAirplane, BsBoxSeamFill, BsBuilding, BsCarFront, BsCodeSlash, BsMinecart, BsPerson } from "react-icons/bs";
+import { RiBuilding4Fill, RiEmotionHappyLine, RiUserStarFill } from "react-icons/ri";
 import { GrMultiple, GrTechnology } from "react-icons/gr";
 import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { useRouter } from 'next/router';
@@ -12,8 +12,9 @@ import { Award } from 'lucide-react';
 const divisions = [
   {
     id: 'automotive',
-    title: 'BINGET Automotive',
-    description: ' Binget Automotive is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.',
+    path: '/divisions/automotive',
+    title: 'BINGET Manufacture and Assembly',
+    description: ' Binget Manufacture and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.',
     image: '/automotive.jpg',
     bgColor: 'oklch(0.16 0.05 139.95)',
     features: [
@@ -25,6 +26,7 @@ const divisions = [
   },
   {
     id: 'realstate',
+    path: '/divisions/realestate',
     title: 'GY Real Estate',
     description: ' G Y Real Estate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
     image: '/gy.jpg',
@@ -38,6 +40,7 @@ const divisions = [
   },
   {
     id: 'tech',
+    path: '/divisions/tech',
     title: 'BINGET Tech',
     description: ' Binget Tech is a technology powerhouse, developing cuttingedge financial solutions tailored for emerging markets. Our software products empower financial institutions with costeffective, scalable, and highly secure digital solutions that drive economic inclusion',
     image: '/tech.png',
@@ -54,6 +57,7 @@ const divisions = [
   },
   {
     id: 'import/export',
+    path: '/divisions/importExport',
     title: 'BINGET Import/Export',
     description: 'Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion.',
     image: '/export.jpg',
@@ -67,6 +71,7 @@ const divisions = [
   },
   {
     id: 'cement',
+    path: '/divisions/cement',
     title: 'BINGET Cement',
     description: 'Binget cement is a major upcoming investment, set to revolutionaize Ethiopia`s construction sector and will play a vital role in Ethiopia`s construction boom and economic growth',
     image: '/cement.webp',
@@ -80,6 +85,7 @@ const divisions = [
   },
   {
     id: 'mining',
+    path: '/divisions/mining',
     title: 'BINGET Mining',
     description: 'Binget Mining is committed to shaping the future of mining by focusing on sustainability, technological innovation, and community growth. As a leading player in the mining industry, we pride ourselves on delivering high-quality resources while preserving the environment and contributing to the local communities where we operate.',
     image: '/mining.jpg',
@@ -92,6 +98,7 @@ const divisions = [
   },
   {
     id: 'security',
+    path: '/divisions/security',
     title: 'YER Security',
     description: 'YER Security is one of the leading providers of comprehensive security and cleaning solutions that ensure the safety, cleanliness, and well-being of your business, home, or organization. With years of expertise and a dedication to excellence, we offer a range of services designed to meet your unique needs and exceed your expectations.',
     image: '/security.jpg',
@@ -179,7 +186,7 @@ export default function HomePage() {
                 <h2 className="text-4xl font-bold mb-2">{div.title}</h2>
                 <p className="mb-4 text-lg text-gray-600">{div.description}</p>
                 <button
-                  onClick={() => scrollToSection(div.id)}
+                  onClick={() => router.push(div.path)}
                   className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
                 >
                   Get Started
@@ -254,108 +261,163 @@ export default function HomePage() {
 
       {/* Sections */}
       <div className='px-15 pt-5'>
-        <h2 className="text-4xl md:text-5xl font-bold text-[#baa452] pb-5">
-          <span className="text-[#212c62] ">Our Divisions</span>
-          <br />
-        </h2>
-        {divisions.map((div, index) => (
-          index % 2 === 0 ? (
-            <div
-              className="grid md:grid-cols-1 gap-6 py-5"
-              key={div.id}
-              id={div.id}
-              ref={(el) => (sectionRefs.current[div.id] = el)}
-            >
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+  <h2 className="text-4xl md:text-5xl font-bold text-[#baa452] pb-5 justify-self-center">
+    <span className="text-[#212c62]">Our Divisions</span>
+    <br />
+  </h2>
+  <div className="flex flex-wrap md:px-30">
+    {divisions.map((div, index) => (
+      <div
+        key={div.id}
+        id={div.id}
+        ref={(el) => (sectionRefs.current[div.id] = el)}
+        className={`p-2 md:${(index +1)% 3 === 1 ? 'w-full' : 'w-1/2'} sm:w-full`}  
+      >
+        <motion.div
+          // initial={{ opacity: 0, y: 50 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          initial={{scale:0.7, opacity:0, x:index % 3 !== 2 ? index%3 == 1 ? 50 : -50 : 0}}
+          whileInView={{scale:1, opacity:1, x: 0}}
+        >
+          <div
+            style={{ backgroundColor: div.bgColor }}
+            className="w-full flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div className="w-full lg:w-1/2 p-6">
+              <h3 className="text-lg font-bold mb-2 text-white">{div.title}</h3>
+              <p className="text-sm text-white mb-4">{div.description}</p>
+              <button
+                className="px-4 py-2 rounded shadow hover:bg-gray-300 float-right text-white"
+                style={{ backgroundColor: 'oklch(0.46 0.09 78.42)' }}
+                onClick={() => router.push(div.path)}
               >
-                <div style={{ backgroundColor: div.bgColor }} className="flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-lg">
-                  <div className="w-full lg:w-1/2 p-6">
-                    <h3 className="text-2xl font-bold mb-2 text-white">{div.title}</h3>
-                    <p className="text-white mb-4">{div.description}</p>
-                    <h1 className="text-white" style={{ fontSize: 20, fontWeight: 700 }}>Key Features</h1>
-                    <ul className="list-none space-y-6 text-white">
-                      {div?.features?.map(x => (
-                        <motion.li
-                          key={x.title}
-                          className="relative pl-8 text-lg font-medium"
-                          variants={listItemVariants}
-                          initial="hidden"
-                          whileInView="visible"
-                          custom={0}
-                        >
-                          <span className="absolute left-0 top-0 text-2xl text-green-500">•</span>
-                          <b>{x?.title}</b><p className='text-sm'>{x?.description}</p>
-                        </motion.li>
-                      ))}
-                    </ul>
-                    <button
-                      className="px-4 py-2 rounded shadow hover:bg-gray-300 float-right text-white"
-                      style={{ backgroundColor: 'oklch(0.46 0.09 78.42)' }}
-                      onClick={() => router.push(div.path)}
-                    >
-                      Read more
-                    </button>
-                  </div>
-                  <div className="w-full lg:w-1/2">
-                    <img src={div.image} alt="Android App" className="h-full object-cover w-full" />
-                  </div>
-                </div>
-              </motion.div>
+                Read more
+              </button>
             </div>
-          ) : (
-            <div
-              className="grid md:grid-cols-1 gap-6"
-              key={div.id}
-              id={div.id}
-              ref={(el) => (sectionRefs.current[div.id] = el)}
-            >
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div style={{ backgroundColor: div.bgColor }} className="flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-lg">
-                  <div className="w-full lg:w-1/2">
-                    <img src={div.image} alt="Android App" className="h-full object-cover w-full" />
-                  </div>
-                  <div className="w-full lg:w-1/2 p-6">
-                    <h3 className="text-2xl font-bold mb-2 text-white">{div.title}</h3>
-                    <p className="text-white mb-4">{div.description}</p>
-                    <h1 className="text-white" style={{ fontSize: 20, fontWeight: 700 }}>Key Features</h1>
-                    <ul className="list-none space-y-6 text-white">
-                      {div?.features?.map(x => (
-                        <motion.li
-                          key={x.title}
-                          className="relative pl-8 text-lg font-medium"
-                          variants={listItemVariants}
-                          initial="hidden"
-                          whileInView="visible"
-                          custom={0}
-                        >
-                          <span className="absolute left-0 top-0 text-2xl text-green-500">•</span>
-                          <b>{x?.title}</b><p className='text-sm'>{x?.description}</p>
-
-                        </motion.li>
-                      ))}
-                    </ul>
-                    <button
-                      className="px-4 py-2 rounded shadow hover:bg-gray-300 float-left text-white"
-                      style={{ backgroundColor: 'oklch(0.16 0.05 139.95)' }}
-                      onClick={() => router.push(div.path)}
-                    >
-                      Read more
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
+            <div className="w-full lg:w-1/2">
+              <img
+                src={div.image}
+                alt="Android App"
+                className="h-full object-cover w-full"
+              />
             </div>
-          )
-        ))}
-
+          </div>
+        </motion.div>
       </div>
+    ))}
+  </div>
+</div>
+
+      <section className="py-16 bg-gradient-to-b from-[#87cdea] to-white">
+        <div className="max-w-6xl mx-auto text-center px-10">
+          
+        <motion.div
+          // initial={{ opacity: 0, y: 50 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2 }}
+          initial={{opacity:0, y:-50}}
+          whileInView={{opacity:1, y: 0}}
+        >
+          <h2 className="text-4xl font-bold mb-4 ">Major Features</h2>
+          </motion.div>
+
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* White-Labeled Solution */}
+            <motion.div
+              initial={{ opacity: 0, y: -50, x: -50 }}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <div className="bg-white p-6 rounded-2xl">
+                <BsCarFront className="w-14 h-14 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Manufatcuring and Assembly</h3>
+                <p className="text-gray-700 ">
+                  Imports premium vehicles like Land Rover and Toyota, and offers cost-effective two- and three-wheelers through TVS and its own brand.
+                </p>
+              </div>
+            </motion.div>
+
+
+            {/* Client-Centric Approach */}
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <div className="bg-white p-6 rounded-2xl shadow-lg ">
+                <BsBuilding className="w-14 h-14 mx-auto mb-4" />
+
+                <h3 className="text-xl font-bold mb-2">Realestate</h3>
+                <p className="text-gray-700 ">
+                  We specialize in upscale residential, commercial, and mixed-use developments with modern architectural design.
+                </p>
+              </div>
+            </motion.div>
+
+
+            {/* Agile Development */}
+            <motion.div
+              initial={{ opacity: 0, y: -50, x: 50 }}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <div className="bg-white p-6 rounded-2xl shadow-lg ">
+                <BsCodeSlash className="w-14 h-14 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Technology</h3>
+                <p className="text-gray-700 ">
+                  delivers cutting-edge digital solutions including core banking, mobile money , and ERP systems.
+                </p>
+              </div>
+            </motion.div>
+
+
+            {/* Technology */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, x: -50 }}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <div className="bg-white p-6 rounded-2xl shadow-lg ">
+                <BsAirplane className="w-14 h-14 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Export</h3>
+                <p className="text-gray-700 ">
+                  Leads Ethiopia’s export market with premium coffee and quality oil products, driven by sustainability, ethical sourcing, and global reach.
+                </p>
+              </div>
+            </motion.div>
+            {/* satiscaction */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <div className="bg-white p-6 rounded-2xl shadow-lg ">
+                <BsBuilding className="w-14 h-14 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Cement Production</h3>
+                <p className="text-gray-700 ">
+                  upcoming investment poised to transform Ethiopia's construction industry, contributing greatly to the country's construction boom and overall economic development.
+                </p>
+              </div>
+            </motion.div>
+            {/* Cost */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, x: 50 }}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <div className="bg-white p-6 rounded-2xl shadow-lg ">
+                <BsMinecart className="w-14 h-14 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Mining</h3>
+                <p className="text-gray-700 ">
+                  dedicated to shaping the future of mining through sustainability, innovation, and community growth. We deliver high-quality resources while protecting the environment and supporting local communities.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
