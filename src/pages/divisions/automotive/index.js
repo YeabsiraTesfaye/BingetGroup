@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import ContactUs from "@/components/contactUs";
 import { motion } from "framer-motion";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import PhotoViewerAlbum from '@/components/photoViewer';
 
 const containerStyle = {
     width: '100%',
@@ -10,10 +11,14 @@ const containerStyle = {
 
 
 const branches = [
-    { id: 1, name: 'Gelan', descriptinon: 'near to Addis Ababa warehouse assembly plant designed to reassemble imported disassembled parts, optimizing cost-efficiency', location: { lat: 8.9986, lng: 38.7870 } },
+    { id: 1, name: 'Gelan', descriptinon: 'Near to Addis Ababa warehouse assembly plant designed to reassemble imported disassembled parts, optimizing cost-efficiency', location: { lat: 8.9986, lng: 38.7870 } },
     { id: 2, name: 'Haile Garment', descriptinon: 'Addis Ababa warehouse for efficient inventory management', location: { lat: 9.0032, lng: 38.7681 } },
     { id: 3, name: 'Kality', descriptinon: 'Addis Ababa  warehouse for high volume of vehiclesThrough innovation and customer focus, Binget Automotive is revolutionizing transportation in Ethiopia.', location: { lat: 9.0084, lng: 38.7472 } },
 ];
+
+const factory = [
+    '/automotive.jpg', '/assembly.jpg', '/assembly2.png'
+]
 
 
 const sections = {
@@ -205,10 +210,7 @@ export default function CompanyProfilePage() {
     };
     return (
         <div className="font-sans text-gray-800">
-            <section style={{alignContent:'center'}} className="keen-slider bg-white w-full lg:h-screen sm:h-[10%] bg-['/bg2.jpg']">
-
-            {/* <section className="keen-slider bg-gray-100 w-full lg:h-screen sm:h-[10%]"> */}
-                
+            <section style={{ alignContent: 'center' }} className="keen-slider bg-white w-full lg:h-screen sm:h-[10%] bg-['/bg2.jpg']">
                 <div className="keen-slider__slide flex flex-col md:flex-row items-center justify-center p-10 gap-8">
                     <motion.img
                         src={sections.hero.image}
@@ -310,7 +312,6 @@ export default function CompanyProfilePage() {
                 </div>
             </section>
             <section className="py-16 px-4 bg-gray-100">
-                {/* Services */}
                 <AnimatedSection title={sections.services.title}>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
                         {sections.services.items.map((item, i) => (
@@ -328,7 +329,11 @@ export default function CompanyProfilePage() {
                     </ul>
                 </AnimatedSection>
             </section>
-            <section className="bg-white">
+            <section className="py-16 px-4 bg-white">
+                <h2 className="text-3xl font-bold text-center text-gray-900 py-10">Our Warehouses and Factories</h2>
+                <PhotoViewerAlbum photos={factory} />
+            </section>
+            <section className="bg-gray-100">
 
                 <h2 className="text-3xl font-bold text-center text-gray-900 py-10">Location</h2>
 

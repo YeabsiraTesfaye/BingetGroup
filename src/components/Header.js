@@ -71,6 +71,7 @@ export default function Header() {
             item.name === "Divisions" ? (
               <div key={item.name} className="relative group">
                 <button
+                
                   className={clsx(
                     "text-gray-600 hover:text-blue-600 font-medium transition flex items-center gap-1",
                     active === item.name &&
@@ -138,7 +139,7 @@ export default function Header() {
                 <div key={item.name}>
                   <button
                     onClick={() => setDivisionsOpen((prev) => !prev)}
-                    className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600 font-medium transition"
+                    className="flex items-center justify-center w-full text-gray-600 hover:text-blue-600 font-medium transition"
                   >
                     {item.name}
                     <ChevronDown
@@ -154,6 +155,8 @@ export default function Header() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         className="pl-4 mt-2 space-y-2 overflow-hidden"
+                style={{justifyItems:"center"}}
+
                       >
                         {divisions.map((div) => (
                           <li key={div.name}>
