@@ -112,7 +112,7 @@ export default function CompanyProfilePage() {
             <h2 className="text-4xl font-bold mb-2">{sections.hero.title}</h2>
             <p className="mb-4 text-lg text-gray-600">{sections.hero.subtitle}</p>
             <button
-              onClick={() => window.open('https://binget-tech-website-walletbirr1.vercel.app', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://bingettech.bingetgroup.com', '_blank', 'noopener,noreferrer')}
               className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
             >
               Visit Website

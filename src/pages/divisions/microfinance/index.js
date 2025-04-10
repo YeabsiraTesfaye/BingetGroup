@@ -28,25 +28,44 @@ const sections = {
       "We launched Bingetbirr mobile banking in 2020 after a NBE directive. Licensed in 2023, it offers a digital wallet for deposits, withdrawals, transfers, remittances, top-ups, and bill payments."
     ]
   },
-  products: {
-    title: "Our Products",
+  savingProducts: {
+    title: "Saving Products",
     items: [
-      { image: "/two.png", title: "Fin-tech", description: "Our cutting-edge fintech platform empowers businesses with a no-code environment and an API-first approach, ensuring seamless integration and customization. Whether you're an individual, a business, or an enterprise, our platform provides dedicated portals tailored to your needs.", redirect: '/projects/mobileMoney' },
-      { image: "/ridePlatform.png", title: "Ride Hailing", description: "Transform your transportation business with our powerful ride-hailing app. Seamlessly connect passengers and drivers, offer real-time tracking, and enable secure payments—all in one user-friendly platform.", redirect: '/projects/rideHailing' },
-      { image: "/core.png", title: "Core banking for Microfinances", description: "A robust core banking system tailored for microfinances, enabling seamless transactions, loan management, and financial operations with high security and efficiency.", redirect: '/projects/coreBanking' },
-      { image: "/erp-front.png", title: "ERP", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/saving.png", title: "Fixed Time Saving", description: "Our cutting-edge fintech platform empowers businesses with a no-code environment and an API-first approach, ensuring seamless integration and customization. Whether you're an individual, a business, or an enterprise, our platform provides dedicated portals tailored to your needs.", redirect: '/projects/mobileMoney' },
+      { image: "/saving.png", title: "Personal Saving", description: "Transform your transportation business with our powerful ride-hailing app. Seamlessly connect passengers and drivers, offer real-time tracking, and enable secure payments—all in one user-friendly platform.", redirect: '/projects/rideHailing' },
+      { image: "/saving.png", title: "Muday Saving", description: "A robust core banking system tailored for microfinances, enabling seamless transactions, loan management, and financial operations with high security and efficiency.", redirect: '/projects/coreBanking' },
+      { image: "/saving.png", title: "Children`s Saving", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/saving.png", title: "Enterprise Saving", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/saving.png", title: "Students Saving", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/saving.png", title: "Interest Free Saving", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+    ]
+  },
+
+  loanProducts: {
+    title: "Loan Products",
+    items: [
+      { image: "/loan.png", title: "Loan For Merchants", description: "Our cutting-edge fintech platform empowers businesses with a no-code environment and an API-first approach, ensuring seamless integration and customization. Whether you're an individual, a business, or an enterprise, our platform provides dedicated portals tailored to your needs.", redirect: '/projects/mobileMoney' },
+      { image: "/loan.png", title: "Salary Loan", description: "Transform your transportation business with our powerful ride-hailing app. Seamlessly connect passengers and drivers, offer real-time tracking, and enable secure payments—all in one user-friendly platform.", redirect: '/projects/rideHailing' },
+      { image: "/loan.png", title: "Purchasing Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Employees Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "House Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Enterprise Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Student Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Agriculture Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Car Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Bajaj Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Short Term Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/loan.png", title: "Enterprise Customers Loan", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
     ]
   },
   services: {
     title: "What We Offer",
     items: [
-      { name: 'IT Consulting', description: 'Expert guidance on IT strategy, digital transformation, and system integration. Optimizing business processes with the latest technology solutions.' },
-      { name: 'Financial System', description: 'Core Banking Solutions Secure, scalable banking and microfinance systems for seamless financial operations. Mobile Money Solutions – Digital payments, mobile wallets, and financial inclusion services.' },
-      { name: 'Infrastructure Service', description: 'Robust IT infrastructure, including cloud computing, networking, and data center solutions. High-performance, secure, and scalable enterprise IT support.' },
-      { name: 'SMS and USSD Gateway', description: 'Reliable messaging solutions for businesses, enabling customer engagement via SMS & USSD. Seamless integration with telecom operators for secure and fast communication.' },
-      { name: 'Enterprise Resource Planing(ERP)', description: 'Streamlined business operations with custom ERP solutions. Integration of finance, HR, supply chain, and other core processes.' },
-      { name: 'Software Development', description: 'Custom software solutions tailored to meet business needs. Agile development, cloud-based applications, and enterprise software.' },
-
+      { name: 'Reasonable Interese', description: 'Expert guidance on IT strategy, digital transformation, and system integration. Optimizing business processes with the latest technology solutions.' },
+      { name: 'Great Cuatomer Service', description: 'Core Banking Solutions Secure, scalable banking and microfinance systems for seamless financial operations. Mobile Money Solutions – Digital payments, mobile wallets, and financial inclusion services.' },
+      { name: 'Trustworthiness', description: 'Robust IT infrastructure, including cloud computing, networking, and data center solutions. High-performance, secure, and scalable enterprise IT support.' },
+      { name: 'Convinience', description: 'Robust IT infrastructure, including cloud computing, networking, and data center solutions. High-performance, secure, and scalable enterprise IT support.' },
+      
     ],
   },
   unique: {
@@ -112,7 +131,7 @@ export default function CompanyProfilePage() {
             <h2 className="text-4xl font-bold mb-2">{sections.hero.title}</h2>
             <p className="mb-4 text-lg text-gray-600">{sections.hero.subtitle}</p>
             <button
-              onClick={() => window.open('https://binget-tech-website-walletbirr1.vercel.app', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://bingetbirr.com', '_blank', 'noopener,noreferrer')}
               className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
             >
               Visit Website
@@ -130,9 +149,9 @@ export default function CompanyProfilePage() {
       </section>
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Products</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">{sections.savingProducts.title}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sections.products.items.map((product, index) => (
+            {sections.savingProducts.items.map((product, index) => (
               <motion.div
                 key={product.name}
                 className="relative pl-8 text-lg font-medium"
@@ -153,7 +172,7 @@ export default function CompanyProfilePage() {
                   <div className="px-4">
                     <h3 className="text-xl font-semibold text-gray-900">{product.title}</h3>
                   </div>
-                  <div className="px-4 py-2">
+                  {/* <div className="px-4 py-2">
                     <button
                       onClick={() => toggleDescription(index)}
                       className="text-blue-700 cursor-pointer"
@@ -166,7 +185,7 @@ export default function CompanyProfilePage() {
                       {product.description}
                     </div>
 
-                  )}
+                  )} */}
 
                 </div>
               </motion.div>
@@ -175,7 +194,55 @@ export default function CompanyProfilePage() {
           </div>
         </div>
       </section>
+
       <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">{sections.loanProducts.title}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sections.loanProducts.items.map((product, index) => (
+              <motion.div
+                key={product.name}
+                className="relative pl-8 text-lg font-medium"
+                variants={listItemVariants}
+                initial="hidden"
+                whileInView="visible"
+                custom={0}
+              >
+                <div
+                  key={product.name}
+                  className="bg-gray-100 shadow-lg rounded-lg overflow-hidden  duration-300"
+                >
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-48 object-cover justify-self-center"
+                  />
+                  <div className="px-4">
+                    <h3 className="text-xl font-semibold text-gray-900">{product.title}</h3>
+                  </div>
+                  {/* <div className="px-4 py-2">
+                    <button
+                      onClick={() => toggleDescription(index)}
+                      className="text-blue-700 cursor-pointer"
+                    >
+                      {expandedProduct === index ? 'Show Less' : 'Read More'}
+                    </button>
+                  </div>
+                  {expandedProduct === index && (
+                    <div className="overflow-hidden max-w-4xl mx-auto p-2 ">
+                      {product.description}
+                    </div>
+
+                  )} */}
+
+                </div>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-16 px-4 bg-gray-100">
         {/* Services */}
         <AnimatedSection title={sections.services.title}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">

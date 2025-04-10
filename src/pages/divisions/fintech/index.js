@@ -30,22 +30,14 @@ const sections = {
   products: {
     title: "Our Products",
     items: [
-      { image: "/two.png", title: "Fin-tech", description: "Our cutting-edge fintech platform empowers businesses with a no-code environment and an API-first approach, ensuring seamless integration and customization. Whether you're an individual, a business, or an enterprise, our platform provides dedicated portals tailored to your needs.", redirect: '/projects/mobileMoney' },
-      { image: "/ridePlatform.png", title: "Ride Hailing", description: "Transform your transportation business with our powerful ride-hailing app. Seamlessly connect passengers and drivers, offer real-time tracking, and enable secure payments—all in one user-friendly platform.", redirect: '/projects/rideHailing' },
-      { image: "/core.png", title: "Core banking for Microfinances", description: "A robust core banking system tailored for microfinances, enabling seamless transactions, loan management, and financial operations with high security and efficiency.", redirect: '/projects/coreBanking' },
-      { image: "/erp-front.png", title: "ERP", description: "Streamline your business operations with our powerful ERP system—integrating finance, HR, sales, and more for efficiency and growth. Simplify, automate, and scale seamlessly", redirect: '/projects/erp' },
+      { image: "/two.png", title: "Mobile Money", description: "Our cutting-edge fintech platform empowers businesses with a no-code environment and an API-first approach, ensuring seamless integration and customization. Whether you're an individual, a business, or an enterprise, our platform provides dedicated portals tailored to your needs.", redirect: '/projects/mobileMoney' },
+     
     ]
   },
   services: {
     title: "What We Offer",
     items: [
-      { name: 'IT Consulting', description: 'Expert guidance on IT strategy, digital transformation, and system integration. Optimizing business processes with the latest technology solutions.' },
-      { name: 'Financial System', description: 'Core Banking Solutions Secure, scalable banking and microfinance systems for seamless financial operations. Mobile Money Solutions – Digital payments, mobile wallets, and financial inclusion services.' },
-      { name: 'Infrastructure Service', description: 'Robust IT infrastructure, including cloud computing, networking, and data center solutions. High-performance, secure, and scalable enterprise IT support.' },
-      { name: 'SMS and USSD Gateway', description: 'Reliable messaging solutions for businesses, enabling customer engagement via SMS & USSD. Seamless integration with telecom operators for secure and fast communication.' },
-      { name: 'Enterprise Resource Planing(ERP)', description: 'Streamlined business operations with custom ERP solutions. Integration of finance, HR, supply chain, and other core processes.' },
-      { name: 'Software Development', description: 'Custom software solutions tailored to meet business needs. Agile development, cloud-based applications, and enterprise software.' },
-
+      { name: 'Mobile Money Solution', description: 'Expert guidance on IT strategy, digital transformation, and system integration. Optimizing business processes with the latest technology solutions.' },
     ],
   },
   unique: {
