@@ -92,7 +92,7 @@ export default function CompanyProfilePage() {
   };
   return (
     <div className="font-sans text-gray-800">
-      <section style={{ alignContent: 'center' }} className="keen-slider bg-white w-full lg:h-screen sm:h-[10%] bg-['/bg2.jpg']">
+      <section style={{ alignContent: 'center' }} className="keen-slider bg-white w-full min-h-screen bg-['/bg2.jpg']">
         <div className="keen-slider__slide flex flex-col md:flex-row items-center justify-center p-10 gap-8">
           <motion.img
             src={sections.hero.image}

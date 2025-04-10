@@ -64,15 +64,6 @@ const companies = [
         image: "/mining.jpg",
         path: '/divisions/mining'
     },
-
-    {
-        id: 7,
-        name: "YER Security",
-        description: "YER Security is one of the leading providers of comprehensive security and cleaning solutions that ensure the safety, cleanliness, and well-being of your business, home, or organization. With years of expertise and a dedication to excellence, we offer a range of services designed to meet your unique needs and exceed your expectations.",
-        image: "/security.jpg",
-        path: '/divisions/security'
-    },
-    // Add more companies as needed
 ];
 
 const testimonials= [

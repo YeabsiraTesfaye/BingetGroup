@@ -124,21 +124,7 @@ const divisions = [
     ],
     path: '/divisions/mining'
   },
-  {
-    id: 'security',
-    path: '/divisions/security',
-    title: 'YER Security',
-    description: 'YER Security is one of the leading providers of comprehensive security and cleaning solutions that ensure the safety, cleanliness, and well-being of your business, home, or organization. With years of expertise and a dedication to excellence, we offer a range of services designed to meet your unique needs and exceed your expectations.',
-    image: '/security.jpg',
-    bgColor: 'oklch(0.16 0.05 139.95)',
-    features: [
-      { title: 'Corporate and Commercial Security', description: 'Protecting businesses, banks, and corporate entities' },
-      { title: 'Residential Security Solutions', description: 'Providing high-tech home security' },
-      { title: 'Advanced SUrveillance and Monitoring', description: 'Using the tatest technology for 24/7 protection' },
-      { title: 'Professional Security Personel', description: 'Trained security teams ensuring safety and reliability' },
-    ],
-    path: '/divisions/security'
-  },
+  
 ];
 
 const features = [
@@ -180,11 +166,11 @@ export default function HomePage() {
 
         {/* Logo and Title */}
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-4 pt-20 pb-5 px-4">
-        <img
-  src="/logo.png"
-  alt="Company Logo"
-  className="max-w-[150px] h-auto"
-/>
+          <img
+            src="/logo.png"
+            alt="Company Logo"
+            className="max-w-[150px] h-auto"
+          />
           <h1
             style={{ color: 'oklch(0.16 0.05 139.95)' }}
             className="hidden md:block text-xl md:text-3xl font-bold drop-shadow-md text-right"
@@ -299,7 +285,7 @@ export default function HomePage() {
               key={div.id}
               id={div.id}
               ref={(el) => (sectionRefs.current[div.id] = el)}
-              className={`p-2 lg:${(index + 1) % 3 === 1 ? 'w-full' : 'w-1/2'} sm:w-full`}
+              className={`p-2 lg:${(index+1) % 3 !== 0 ? 'w-1/2' : 'w-full'} sm:w-full`}
             >
               <motion.div
                 transition={{ duration: 0.8 }}

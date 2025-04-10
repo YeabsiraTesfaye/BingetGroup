@@ -35,7 +35,6 @@ export default function Footer() {
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>BINGETBirr</li>
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/cement')}>Cement</li>
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/mining')}>BINGET Mining</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/security')}>NEon Security</li>
           </ul>
         </div>
 

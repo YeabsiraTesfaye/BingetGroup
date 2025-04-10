@@ -20,7 +20,6 @@ const divisions = [
   { name: "BINGET Birr", path: "/divisions/fintech" },
   { name: "Cement Investment", path: "/divisions/cement" },
   { name: "BINGET Mining", path: "/divisions/mining" },
-  { name: "NEON Security", path: "/divisions/security" },
 ];
 
 export default function Header() {
