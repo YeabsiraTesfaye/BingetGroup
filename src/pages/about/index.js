@@ -39,7 +39,7 @@ const companies = [
         id: 8,
         name: "Binget Microfinance",
         description: " Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion",
-        image: "/binget_microfinance.jpeg",
+        image: "/b_m.jpeg",
         path: '/divisions/microfinance'
     },
     {

@@ -74,7 +74,7 @@ const divisions = [
     path: '/divisions/microfinance',
     title: 'BINGET Microfinance Institution',
     description: ' Binget Microfinance Institution is a pioneering fintech-driven financial service provider dedicated to offering accessible, efficient, and secure banking solutions.',
-    image: '/binget_microfinance.jpeg',
+    image: '/b_m.jpeg',
     bgColor: 'oklch(0.16 0.05 139.95)',
     features: [
       { title: 'High volume of USD Annual Exports', description: ' A significant contributor to Ethiopia’s foreign exchange earnings.' },

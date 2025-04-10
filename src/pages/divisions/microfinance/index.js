@@ -19,7 +19,7 @@ const sections = {
   hero: {
     title: "BINGET Microfinance",
     subtitle: " Binget Microfinance Institution is a pioneering fintech-driven financial service provider dedicated to offering accessible, efficient, and secure banking solutions.",
-    image: "/binget_microfinance.jpeg",
+    image: "/b_m.jpeg",
   },
   about: {
     title: "Our Company",
