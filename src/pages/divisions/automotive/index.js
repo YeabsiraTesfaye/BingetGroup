@@ -17,13 +17,19 @@ const branches = [
 ];
 
 const factory = [
-    '/automotive.jpg', '/assembly.jpg', '/assembly2.png'
+    { type: 'image', src: '/warehouse1.jpg' },
+    { ytpe: 'video', src: '/warehouse2.mp4' },
+    { type: 'video', src: '/warehouse3.mp4' },
+    { type: 'image', src: '/showroom1.jpg' },
+    { type: 'image', src: '/showroom2.jpg' },
+    { type: 'image', src: '/showroom3.jpg' },
+    { type: 'image', src: '/showroom4.jpg' },
 ]
 
 
 const sections = {
     hero: {
-        title: "BINGET Automotive",
+        title: "BINGET Manufacturing and Assembly",
         subtitle: "Binget Manufacture and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.",
         image: "/automotive.jpg",
     },
@@ -159,6 +165,49 @@ const sections = {
                     { label: "Braking System (Front/Rear)", value: "Disc / Drum" },
                     { label: "Tire Size (Front/Rear)", value: "2.50-17 / 2.75-17" },
                     { label: "Fuel Consumption", value: "2 L / 100 km (Super)" },
+                ],
+
+            },
+            {
+                name: 'Bajaj Pulsar', image: '/pulsar150.webp',
+                specs: [
+                    { label: "Engine Type", value: "4-Stroke, 2-Valve, Twin Spark BSVI Compliant DTS-I FI Engine" },
+                    { label: "Displacement", value: "149.50 cc" },
+                    { label: "Max Power", value: "10.3 kW (14 PS) @ 8500 rpm" },
+                    { label: "Max Torque", value: "13.25 Nm @ 6500 rpm" },
+                    { label: "Fuel Tank Capacity", value: "15 L" },
+
+                    { label: "Front Tyre (Twin Disc)", value: "90/90 17 Tubeless" },
+                    { label: "Front Tyre (Single Disc)", value: "80/100 17 Tubeless" },
+                    { label: "Rear Tyre (Twin Disc)", value: "120/80 17 Tubeless" },
+                    { label: "Rear Tyre (Single Disc)", value: "100/90 17 Tubeless" },
+
+                    { label: "Front Suspension (Twin Disc)", value: "Telescopic, 37 mm Conventional fork" },
+                    { label: "Front Suspension (Single Disc)", value: "Telescopic, 31 mm Conventional fork" },
+                    { label: "Rear Suspension", value: "Twin Shock absorber, Gas filled with Canister" },
+
+                    { label: "Front Brake (Twin Disc)", value: "280 mm Dia. Disc" },
+                    { label: "Front Brake (Single Disc)", value: "ABS, 260 mm Disc" },
+                    { label: "Rear Brake (Twin Disc)", value: "230 mm Dia. Disc" },
+                    { label: "Rear Brake (Single Disc)", value: "130 mm Dia. Drum" },
+
+                    { label: "Length (Twin Disc)", value: "2035 mm" },
+                    { label: "Length (Single Disc)", value: "2055 mm" },
+                    { label: "Ground Clearance", value: "165 mm" },
+                    { label: "Height (Twin Disc)", value: "1115 mm" },
+                    { label: "Height (Single Disc)", value: "1060 mm" },
+                    { label: "Width (Twin Disc)", value: "750 mm" },
+                    { label: "Width (Single Disc)", value: "765 mm" },
+                    { label: "Wheelbase (Twin Disc)", value: "1345 mm" },
+                    { label: "Wheelbase (Single Disc)", value: "1320 mm" },
+                    { label: "Kerb Weight (Twin Disc)", value: "150 kg" },
+                    { label: "Kerb Weight (Single Disc)", value: "148 kg" },
+
+                    { label: "Electrical System", value: "DC, 12V, 8Ah VRLA" },
+                    { label: "Headlamp", value: "35/35 W with 2 pilot lamps, With AHO (Auto Headlamp On)" },
+                    { label: "Digital Console", value: "Fully Digital Reverse Monochrome LCD Speedometer with Bluetooth connectivity, Call Accept/Reject, Missed call and message alert, Gear indicator, Clock & DTE. Available in TD and select SD variant only." },
+                    { label: "USB Charging Port", value: "Standard USB charging port included" }
+
                 ],
 
             },
@@ -331,7 +380,7 @@ export default function CompanyProfilePage() {
             </section>
             <section className="py-16 px-4 bg-white">
                 <h2 className="text-3xl font-bold text-center text-gray-900 py-10">Our Warehouses and Factories</h2>
-                <PhotoViewerAlbum photos={factory} />
+                <PhotoViewerAlbum media={factory} />
             </section>
             <section className="bg-gray-100">
 

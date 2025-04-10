@@ -17,15 +17,15 @@ const branches = [
 
 const sections = {
   hero: {
-    title: "BINGET Tech",
-    subtitle: "Binget Tech is a technology powerhouse, developing cuttingedge financial solutions tailored for emerging markets. Our software products empower financial institutions with costeffective, scalable, and highly secure digital solutions that drive economic inclusion",
-    image: "/tech.png",
+    title: "BINGET Microfinance",
+    subtitle: " Binget Microfinance Institution is a pioneering fintech-driven financial service provider dedicated to offering accessible, efficient, and secure banking solutions.",
+    image: "/binget_microfinance.jpeg",
   },
   about: {
     title: "Our Company",
     contents: [
-      "Binget Tech is the technology division of Binget Group, a diversified private limited company established in 2018 in Ethiopia. Initially focused on import and export activities, Binget Group expanded into the fintech sector following the National Bank of Ethiopia's directive in April 2020, which permitted non-bank entities to offer e-payment services. This strategic move led to the creation of Binget Tech, aiming to provide innovative digital financial solutions to enhance financial inclusion in Ethiopia",
-      "Binget Tech's commitment to technological innovation and financial inclusion is evident in its efforts to provide secure, efficient, and user-friendly digital financial services. By leveraging advanced technology and strategic partnerships, Binget Tech aims to play a pivotal role in transforming Ethiopia's financial landscape and promoting economic growth."
+      "Binget Microfinance Institutions S.C, established in 2018, works towards empowering individuals and businesses with digital financial solutions, fostering financial inclusion and supporting Ethiopia's digital economy.",
+      "We launched Bingetbirr mobile banking in 2020 after a NBE directive. Licensed in 2023, it offers a digital wallet for deposits, withdrawals, transfers, remittances, top-ups, and bill payments."
     ]
   },
   products: {

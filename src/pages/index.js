@@ -70,6 +70,34 @@ const divisions = [
     path: '/divisions/importExport'
   },
   {
+    id: 'microfinance',
+    path: '/divisions/microfinance',
+    title: 'BINGET Microfinance Institution',
+    description: ' Binget Microfinance Institution is a pioneering fintech-driven financial service provider dedicated to offering accessible, efficient, and secure banking solutions.',
+    image: '/binget_microfinance.jpeg',
+    bgColor: 'oklch(0.16 0.05 139.95)',
+    features: [
+      { title: 'High volume of USD Annual Exports', description: ' A significant contributor to Ethiopia’s foreign exchange earnings.' },
+      { title: 'High-Quality Ethiopian Coffee', description: ' Exporting specialty-grade coffee that competes in global markets' },
+      { title: 'Oil Product Exports', description: 'Providing high-quality agricultural oil products with strict quality control standards' },
+    ],
+    path: '/divisions/microfinance'
+  },
+  {
+    id: 'bingetBirr',
+    path: '/divisions/importExport',
+    title: 'BingetBirr Digital Platform',
+    description: ' BingetBirr is a next-generation digital financial services platform, providing a seamless and secure ecosystem for businesses, agents, and individual users.',
+    image: '/binget_birr.png',
+    bgColor: 'oklch(0.46 0.09 78.42)',
+    features: [
+      { title: 'High volume of USD Annual Exports', description: ' A significant contributor to Ethiopia’s foreign exchange earnings.' },
+      { title: 'High-Quality Ethiopian Coffee', description: ' Exporting specialty-grade coffee that competes in global markets' },
+      { title: 'Oil Product Exports', description: 'Providing high-quality agricultural oil products with strict quality control standards' },
+    ],
+    path: '/divisions/importExport'
+  },
+  {
     id: 'cement',
     path: '/divisions/cement',
     title: 'BINGET Cement',
@@ -144,30 +172,44 @@ export default function HomePage() {
       }, 4000);
     },
   });
-
-  const scrollToSection = (id) => {
-    sectionRefs.current[id]?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="bg-white text-gray-900 font-sans">
-      <div className="w-full h-screen  relative overflow-hidden bg-[url(/bg.jpg)] bg-cover bg-center">
-        <div className="w-full h-full absolute bg-white/80" />
+      <div className="w-full min-h-screen flex flex-col relative overflow-hidden bg-[url(/bg.jpg)] bg-cover bg-center">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-white/80 z-0" />
 
-        <div className="mt-25 justify-items-center flex justify-self-center">
-          <img src="/logo.png" alt="Company Logo" className="h-30 w-min z-[10]" />
-          <h1 style={{ color: 'oklch(0.16 0.05 139.95)' }} className="hidden md:block text-2xl md:text-3xl font-bold drop-shadow-md w-min text-right">
-            <div className='text-[80px]'>
-              BINGET
-            </div> Group
+        {/* Logo and Title */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-4 pt-20 pb-5 px-4">
+        <img
+  src="/logo.png"
+  alt="Company Logo"
+  className="max-w-[150px] h-auto"
+/>
+          <h1
+            style={{ color: 'oklch(0.16 0.05 139.95)' }}
+            className="hidden md:block text-xl md:text-3xl font-bold drop-shadow-md text-right"
+          >
+            <div className="text-4xl md:text-[60px] leading-tight">BINGET</div>
+            Group
           </h1>
         </div>
 
-        <div ref={sliderRef} className="keen-slider w-full lg:h-[50%] sm:h-[10%]">
+        {/* Subtitle */}
+        <div className="relative z-10 flex justify-center px-4 mb-4">
+          <h2
+            style={{ color: 'oklch(0.16 0.05 139.95)' }}
+            className="text-center font-semibold drop-shadow-md text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl"
+          >
+            GOLDEN LEVEL TAXPAYER | MULTI-INDUSTRY INVESTMENT | DEVELOPER OF MULTIPLE HIGHRISE BUILDINGS
+          </h2>
+        </div>
+
+        {/* Slider */}
+        <div ref={sliderRef} className="keen-slider w-full flex-1 z-10 overflow-y-auto">
           {divisions.map((div) => (
             <div
               key={div.id}
-              className="keen-slider__slide flex flex-col md:flex-row items-center justify-center p-10 gap-8"
+              className="keen-slider__slide flex flex-col md:flex-row items-center justify-center px-6 md:px-10 gap-6 py-6"
             >
               <motion.img
                 src={div.image}
@@ -183,7 +225,7 @@ export default function HomePage() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-4xl font-bold mb-2">{div.title}</h2>
+                <h2 className="md:text-4xl font-bold mb-2">{div.title}</h2>
                 <p className="mb-4 text-lg text-gray-600">{div.description}</p>
                 <button
                   onClick={() => router.push(div.path)}
@@ -195,22 +237,8 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-
-        {/* <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-6">
-          <button
-            className="bg-gray-200 px-4 py-2 rounded shadow hover:bg-gray-300"
-            onClick={() => instanceRef.current?.prev()}
-          >
-            Prev
-          </button>
-          <button
-            className="bg-gray-200 px-4 py-2 rounded shadow hover:bg-gray-300"
-            onClick={() => instanceRef.current?.next()}
-          >
-            Next
-          </button>
-        </div> */}
       </div>
+
       <section className="bg-gray-100 py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
@@ -261,65 +289,63 @@ export default function HomePage() {
 
       {/* Sections */}
       <div className='px-15 pt-5'>
-  <h2 className="text-4xl md:text-5xl font-bold text-[#baa452] pb-5 justify-self-center">
-    <span className="text-[#212c62]">Our Divisions</span>
-    <br />
-  </h2>
-  <div className="flex flex-wrap md:px-30">
-    {divisions.map((div, index) => (
-      <div
-        key={div.id}
-        id={div.id}
-        ref={(el) => (sectionRefs.current[div.id] = el)}
-        className={`p-2 md:${(index +1)% 3 === 1 ? 'w-full' : 'w-1/2'} sm:w-full`}  
-      >
-        <motion.div
-          // initial={{ opacity: 0, y: 50 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          initial={{scale:0.7, opacity:0, x:index % 3 !== 2 ? index%3 == 1 ? 50 : -50 : 0}}
-          whileInView={{scale:1, opacity:1, x: 0}}
-        >
-          <div
-            style={{ backgroundColor: div.bgColor, height:350 }}
-            className="w-full flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-lg"
-          >
-            <div className="w-full lg:w-1/2 p-6">
-              <h3 className="text-lg font-bold mb-2 text-white">{div.title}</h3>
-              <p className="text-sm text-white mb-4">{div.description}</p>
-              <button
-                className="px-4 py-2 rounded shadow hover:bg-gray-300 float-right text-white"
-                style={{ backgroundColor: 'oklch(0.46 0.09 78.42)' }}
-                onClick={() => router.push(div.path)}
+        <h2 className="text-4xl md:text-5xl font-bold text-[#baa452] pb-5 justify-self-center">
+          <span className="text-[#212c62]">Our Divisions</span>
+          <br />
+        </h2>
+        <div className="flex flex-wrap md:px-30">
+          {divisions.map((div, index) => (
+            <div
+              key={div.id}
+              id={div.id}
+              ref={(el) => (sectionRefs.current[div.id] = el)}
+              className={`p-2 lg:${(index + 1) % 3 === 1 ? 'w-full' : 'w-1/2'} sm:w-full`}
+            >
+              <motion.div
+                transition={{ duration: 0.8 }}
+                initial={{ scale: 0.7, opacity: 0, x: index % 3 !== 2 ? index % 3 == 1 ? 50 : -50 : 0 }}
+                whileInView={{ scale: 1, opacity: 1, x: 0 }}
               >
-                Read more
-              </button>
+                <div
+                  style={{ backgroundColor: div.bgColor }}
+                  className="sm:h-full md:h-100 w-full flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-lg"
+                >
+                  <div className="w-full lg:w-1/2 p-6">
+                    <h3 className="text-lg font-bold mb-2 text-white">{div.title}</h3>
+                    <p className="text-sm text-white mb-4">{div.description}</p>
+                    <button
+                      className="px-4 py-2 rounded shadow hover:bg-gray-300 float-right text-white"
+                      style={{ backgroundColor: index % 2 != 0 ? 'oklch(0.16 0.05 139.95)' : 'oklch(0.46 0.09 78.42)' }}
+                      onClick={() => router.push(div.path)}
+                    >
+                      Read more
+                    </button>
+                  </div>
+                  <div className="w-full lg:w-1/2">
+                    <img
+                      src={div.image}
+                      alt="Android App"
+                      className="h-full object-cover w-full"
+                    />
+                  </div>
+                </div>
+              </motion.div>
             </div>
-            <div className="w-full lg:w-1/2">
-              <img
-                src={div.image}
-                alt="Android App"
-                className="h-full object-cover w-full"
-              />
-            </div>
-          </div>
-        </motion.div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
 
       <section className="py-16 bg-gradient-to-b from-[#87cdea] to-white">
         <div className="max-w-6xl mx-auto text-center px-10">
-          
-        <motion.div
-          // initial={{ opacity: 0, y: 50 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
-          initial={{opacity:0, y:-50}}
-          whileInView={{opacity:1, y: 0}}
-        >
-          <h2 className="text-4xl font-bold mb-4 ">Major Investments</h2>
+
+          <motion.div
+            // initial={{ opacity: 0, y: 50 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h2 className="text-4xl font-bold mb-4 ">Major Investments</h2>
           </motion.div>
 
 

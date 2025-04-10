@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const sections = {
   hero: {
-    title: "Welcome to YER Security",
+    title: "Welcome to NEON Security",
     subtitle: "Empowering industries, transforming lives.",
     image: "/bg.jpg",
   },

@@ -7,24 +7,26 @@ import { useRouter } from "next/router";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Divisions" },
+  { name: "Investments" },
   { name: "Contact", path: "/contact" },
 ];
 
 const divisions = [
-  { name: "BINGET Automotive", path: "/divisions/automotive" },
+  { name: "BINGET Manufacturing and Assembly", path: "/divisions/automotive" },
   { name: "GY Real Estate", path: "/divisions/realestate" },
   { name: "BINGET Tech", path: "/divisions/tech" },
-  { name: "Import/Export", path: "/divisions/importExport" },
-  { name: "Cement", path: "/divisions/cement" },
+  { name: "Export", path: "/divisions/importExport" },
+  { name: "BINGET Microfinance", path: "/divisions/microfinance" },
+  { name: "BINGET Birr", path: "/divisions/fintech" },
+  { name: "Cement Investment", path: "/divisions/cement" },
   { name: "BINGET Mining", path: "/divisions/mining" },
-  { name: "YER Security", path: "/divisions/security" },
+  { name: "NEON Security", path: "/divisions/security" },
 ];
 
 export default function Header() {
   const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [divisionsOpen, setDivisionsOpen] = useState(false);
+  const [divisionsOpen, setInvestmentsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
   const router = useRouter();
@@ -35,6 +37,7 @@ export default function Header() {
 
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
         setIsVisible(false);
+        setMenuOpen(false)
       } else {
         setIsVisible(true);
       }
@@ -68,7 +71,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 relative">
           {navItems.map((item) =>
-            item.name === "Divisions" ? (
+            item.name === "Investments" ? (
               <div key={item.name} className="relative group">
                 <button
                 
@@ -87,7 +90,7 @@ export default function Header() {
                       <li key={div.name}>
                         <button
                           onClick={() => {
-                            setActive("Divisions");
+                            setActive("Investments");
                             router.push(div.path);
                           }}
                           className="w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-700"
@@ -135,10 +138,10 @@ export default function Header() {
         >
           <div className="px-4 pb-4 flex flex-col space-y-3">
             {navItems.map((item) =>
-              item.name === "Divisions" ? (
+              item.name === "Investments" ? (
                 <div key={item.name}>
                   <button
-                    onClick={() => setDivisionsOpen((prev) => !prev)}
+                    onClick={() => setInvestmentsOpen((prev) => !prev)}
                     className="flex items-center justify-center w-full text-gray-600 hover:text-blue-600 font-medium transition"
                   >
                     {item.name}
@@ -162,7 +165,7 @@ export default function Header() {
                           <li key={div.name}>
                             <button
                               onClick={() => {
-                                setActive("Divisions");
+                                setActive("Investments");
                                 router.push(div.path);
                                 setMenuOpen(false);
                               }}

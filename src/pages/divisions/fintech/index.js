@@ -17,15 +17,14 @@ const branches = [
 
 const sections = {
   hero: {
-    title: "BINGET Tech",
-    subtitle: "Binget Tech is a technology powerhouse, developing cuttingedge financial solutions tailored for emerging markets. Our software products empower financial institutions with costeffective, scalable, and highly secure digital solutions that drive economic inclusion",
-    image: "/tech.png",
+    title: "BINGETBirr ",
+    subtitle: " BingetBirr is a next-generation digital financial services platform, providing a seamless and secure ecosystem for businesses, agents, and individual users",
+    image: "/binget_birr.png",
   },
   about: {
     title: "Our Company",
     contents: [
-      "Binget Tech is the technology division of Binget Group, a diversified private limited company established in 2018 in Ethiopia. Initially focused on import and export activities, Binget Group expanded into the fintech sector following the National Bank of Ethiopia's directive in April 2020, which permitted non-bank entities to offer e-payment services. This strategic move led to the creation of Binget Tech, aiming to provide innovative digital financial solutions to enhance financial inclusion in Ethiopia",
-      "Binget Tech's commitment to technological innovation and financial inclusion is evident in its efforts to provide secure, efficient, and user-friendly digital financial services. By leveraging advanced technology and strategic partnerships, Binget Tech aims to play a pivotal role in transforming Ethiopia's financial landscape and promoting economic growth."
+      " BingetBirr is at the forefront of Ethiopia’s cashless revolution, making digital transactions more accessible, reliable, and scalable. To provide wallet banking services, the company has acquired a feature-rich digital wallet platform called Bingebirr, which has all the basic and custom wallet services. The platform provides secured, scalable, robust, and flexible mobile financial services that allow digital wallet companies to efficiently roll out and scale mobile money services by offering a wide range of use cases for consumers through multiple transaction channels"
     ]
   },
   products: {
@@ -112,7 +111,7 @@ export default function CompanyProfilePage() {
             <h2 className="text-4xl font-bold mb-2">{sections.hero.title}</h2>
             <p className="mb-4 text-lg text-gray-600">{sections.hero.subtitle}</p>
             <button
-              onClick={() => window.open('https://binget-tech-website-walletbirr1.vercel.app', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://bingetbirr.com/', '_blank', 'noopener,noreferrer')}
               className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
             >
               Visit Website

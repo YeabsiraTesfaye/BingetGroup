@@ -36,6 +36,20 @@ const companies = [
         path: '/divisions/importExport'
     },
     {
+        id: 8,
+        name: "Binget Microfinance",
+        description: " Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion",
+        image: "/binget_microfinance.jpeg",
+        path: '/divisions/microfinance'
+    },
+    {
+        id: 9,
+        name: "Binget Birr",
+        description: " Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion",
+        image: "/binget_birr.png",
+        path: '/divisions/fintech'
+    },
+    {
         id: 5,
         name: "Binget Cement",
         description: "Binget Cement is a major upcoming investment, set to revolutionizeEthiopia's construction sector and will play a vital role in Ethiopia's construction boom and economy growth.",

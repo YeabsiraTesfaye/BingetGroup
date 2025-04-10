@@ -27,13 +27,15 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-gray-900 ">Divisions</h3>
           <ul className="mt-2 space-y-2 text-sm text-gray-700 ">
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/mobileMoney')}>BINGET Automotive</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/rideHailing')}>GY Realestate</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/coreBanking')}>BINGET TEch</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>Export</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>Cement</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>BINGET Mining</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/projects/erp')}>YER Security</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/automotive')}>BINGET Automotive</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/realestate')}>GY Realestate</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/tech')}>BINGET Tech</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>Export</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>BINGET Microfinance</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>BINGETBirr</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/cement')}>Cement</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/mining')}>BINGET Mining</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/security')}>NEon Security</li>
           </ul>
         </div>
 
@@ -45,6 +47,8 @@ export default function Footer() {
             <li>Realestate</li>
             <li>Technology</li>
             <li>Export</li>
+            <li>Microfinance</li>
+            <li>FinTech</li>
             <li>Cement Production</li>
             <li>Mining</li>
           </ul>
