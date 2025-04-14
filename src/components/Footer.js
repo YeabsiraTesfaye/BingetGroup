@@ -28,13 +28,13 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-gray-900 ">Divisions</h3>
           <ul className="mt-2 space-y-2 text-sm text-gray-700 ">
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/automotive')}>BINGET Automotive</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/realestate')}>GY Realestate</li>
+            <li className="cursor-pointer" onClick={()=>router.push('#')}>GY Realestate</li>
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/tech')}>BINGET Tech</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>Export</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>BINGET Microfinance</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/importExport')}>BINGETBirr</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/cement')}>Cement</li>
-            <li className="cursor-pointer" onClick={()=>router.push('/divisions/mining')}>BINGET Mining</li>
+            <li className="cursor-pointer" onClick={()=>router.push('#')}>Export</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/microfinance')}>BINGET Microfinance</li>
+            <li className="cursor-pointer" onClick={()=>router.push('/divisions/fintech')}>BINGETBirr</li>
+            <li className="cursor-pointer" onClick={()=>router.push('#')}>Cement</li>
+            <li className="cursor-pointer" onClick={()=>router.push('#')}>BINGET Mining</li>
           </ul>
         </div>
 

@@ -31,7 +31,7 @@ const sections = {
     hero: {
         title: "BINGET Manufacturing and Assembly",
         subtitle: "Binget Manufacture and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.",
-        image: "/automotive.jpg",
+        image: "/automotive.png",
     },
     about: {
         title: "Our Company",

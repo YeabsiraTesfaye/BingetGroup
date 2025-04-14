@@ -12,10 +12,9 @@ import { Award } from 'lucide-react';
 const divisions = [
   {
     id: 'automotive',
-    path: '/divisions/automotive',
     title: 'BINGET Manufacturing and Assembly',
     description: ' Binget Manufacturing and Assembly is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, andassembly. We provide customers with access to world-class brands while ensuring affordability and reliability.',
-    image: '/automotive.jpg',
+    image: '/automotive.png',
     bgColor: 'oklch(0.16 0.05 139.95)',
     features: [
       { title: 'Premium Car Imports', description: 'We specialize in high-demand brands such as Land Rover, Toyota, and other premium manufacturers, ensuring our clients receive top-tier vehicles with reliable after-sales service.' },
@@ -26,7 +25,6 @@ const divisions = [
   },
   {
     id: 'realstate',
-    path: '/divisions/realestate',
     title: 'GY Real Estate',
     description: ' G Y Real Estate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
     image: '/gy.jpg',
@@ -36,11 +34,10 @@ const divisions = [
       { title: ' Expanding Portfolio', description: 'We continue to acquire and develop properties that elevate the city’s real estate standards' },
       { title: '  Sustainable & Modern Designs', description: 'Our projects are designed to meet global standards in luxury, efficiency, and sustainability' },
     ],
-    path: '/divisions/realestate'
+    path: '#'
   },
   {
     id: 'tech',
-    path: '/divisions/tech',
     title: 'BINGET Tech',
     description: ' Binget Tech is a technology powerhouse, developing cuttingedge financial solutions tailored for emerging markets. Our software products empower financial institutions with costeffective, scalable, and highly secure digital solutions that drive economic inclusion',
     image: '/tech.png',
@@ -57,8 +54,7 @@ const divisions = [
   },
   {
     id: 'import/export',
-    path: '/divisions/importExport',
-    title: 'BINGET Import/Export',
+    title: 'Import',
     description: 'Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion.',
     image: '/export.jpg',
     bgColor: 'oklch(0.46 0.09 78.42)',
@@ -67,11 +63,10 @@ const divisions = [
       { title: 'High-Quality Ethiopian Coffee', description: ' Exporting specialty-grade coffee that competes in global markets' },
       { title: 'Oil Product Exports', description: 'Providing high-quality agricultural oil products with strict quality control standards' },
     ],
-    path: '/divisions/importExport'
+    path: '#'
   },
   {
     id: 'microfinance',
-    path: '/divisions/microfinance',
     title: 'BINGET Microfinance Institution',
     description: ' Binget Microfinance Institution is a pioneering fintech-driven financial service provider dedicated to offering accessible, efficient, and secure banking solutions.',
     image: '/b_m.jpeg',
@@ -85,7 +80,6 @@ const divisions = [
   },
   {
     id: 'bingetBirr',
-    path: '/divisions/importExport',
     title: 'BingetBirr Digital Platform',
     description: ' BingetBirr is a next-generation digital financial services platform, providing a seamless and secure ecosystem for businesses, agents, and individual users.',
     image: '/binget_birr.png',
@@ -99,7 +93,6 @@ const divisions = [
   },
   {
     id: 'cement',
-    path: '/divisions/cement',
     title: 'BINGET Cement',
     description: 'Binget cement is a major upcoming investment, set to revolutionaize Ethiopia`s construction sector and will play a vital role in Ethiopia`s construction boom and economic growth',
     image: '/cement.webp',
@@ -109,11 +102,10 @@ const divisions = [
       { title: 'Strategic Investment', description: 'Strengethning infrastructure and urban development' },
       { title: 'State-of-the-art manufatcuring', description: 'Ensuring quality and efficiency' },
     ],
-    path: '/divisions/cement'
+    path: '#'
   },
   {
     id: 'mining',
-    path: '/divisions/mining',
     title: 'BINGET Mining',
     description: 'Binget Mining is committed to shaping the future of mining by focusing on sustainability, technological innovation, and community growth. As a leading player in the mining industry, we pride ourselves on delivering high-quality resources while preserving the environment and contributing to the local communities where we operate.',
     image: '/mining.jpg',
@@ -122,7 +114,7 @@ const divisions = [
       { title: 'Advanced mining technology', description: 'Utilizing modern techniques for high efficiency extraction.' },
       { title: 'Job creation and Economic growth', description: 'Contributing to Ethiopia`s mining industry development.' },
     ],
-    path: '/divisions/mining'
+    path: '#'
   },
   
 ];

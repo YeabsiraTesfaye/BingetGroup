@@ -11,7 +11,7 @@ const companies = [
         id: 1,
         name: "Binget Automotive",
         description: "Binget Automotive is a leading force in Ethiopia’s automotive sector, setting new standards in vehicle imports, sales, and assembly. We provide customers with access to world-class brands while ensuring affordability and reliability",
-        image: "/automotive.jpg",
+        image: "/automotive.png",
         path: '/divisions/automotive'
     },
     {
