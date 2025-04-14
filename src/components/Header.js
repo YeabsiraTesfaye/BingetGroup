@@ -13,12 +13,12 @@ const navItems = [
 
 const divisions = [
   { name: "BINGET Manufacturing and Assembly", path: "/divisions/automotive" },
-  { name: "GY Real Estate", path: "#" },
+  { name: "BINGET Real Estate", path: "#" },
   { name: "BINGET Tech", path: "/divisions/tech" },
   { name: "Export", path: "#" },
   { name: "BINGET Microfinance", path: "/divisions/microfinance" },
   { name: "BINGET Birr", path: "/divisions/fintech" },
-  { name: "Cement Investment", path: "#" },
+  // { name: "Cement Investment", path: "#" },
   { name: "BINGET Mining", path: "#" },
 ];
 

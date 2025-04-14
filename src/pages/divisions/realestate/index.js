@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const sections = {
   hero: {
-    title: "Welcome to GY Realestate",
+    title: "Welcome to BINGET Realestate",
     subtitle: "Empowering industries, transforming lives.",
     image: "/bg.jpg",
   },

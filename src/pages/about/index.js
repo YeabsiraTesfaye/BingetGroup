@@ -16,7 +16,7 @@ const companies = [
     },
     {
         id: 2,
-        name: "GY Real Estate",
+        name: "BINGET Real Estate",
         description: "G Y Real Estate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence.",
         image: "gy.jpg",
         path: '/divisions/realestate'
@@ -49,13 +49,13 @@ const companies = [
         image: "/binget_birr.png",
         path: '/divisions/fintech'
     },
-    {
-        id: 5,
-        name: "Binget Cement",
-        description: "Binget Cement is a major upcoming investment, set to revolutionizeEthiopia's construction sector and will play a vital role in Ethiopia's construction boom and economy growth.",
-        image: "/cement.webp",
-        path: "/divisions/cement"
-    },
+    // {
+    //     id: 5,
+    //     name: "Binget Cement",
+    //     description: "Binget Cement is a major upcoming investment, set to revolutionizeEthiopia's construction sector and will play a vital role in Ethiopia's construction boom and economy growth.",
+    //     image: "/cement.webp",
+    //     path: "/divisions/cement"
+    // },
 
     {
         id: 6,

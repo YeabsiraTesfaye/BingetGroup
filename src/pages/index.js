@@ -25,7 +25,7 @@ const divisions = [
   },
   {
     id: 'realstate',
-    title: 'GY Real Estate',
+    title: 'BINGET Real Estate',
     description: ' G Y Real Estate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
     image: '/gy.jpg',
     bgColor: 'oklch(0.46 0.09 78.42)',
@@ -91,19 +91,19 @@ const divisions = [
     ],
     path: '/divisions/importExport'
   },
-  {
-    id: 'cement',
-    title: 'BINGET Cement',
-    description: 'Binget cement is a major upcoming investment, set to revolutionaize Ethiopia`s construction sector and will play a vital role in Ethiopia`s construction boom and economic growth',
-    image: '/cement.webp',
-    bgColor: 'oklch(0.16 0.05 139.95)',
-    features: [
-      { title: 'High capacity cement production', description: 'Addressing Ethiopia`s growing demand for building materials' },
-      { title: 'Strategic Investment', description: 'Strengethning infrastructure and urban development' },
-      { title: 'State-of-the-art manufatcuring', description: 'Ensuring quality and efficiency' },
-    ],
-    path: '#'
-  },
+  // {
+  //   id: 'cement',
+  //   title: 'BINGET Cement',
+  //   description: 'Binget cement is a major upcoming investment, set to revolutionaize Ethiopia`s construction sector and will play a vital role in Ethiopia`s construction boom and economic growth',
+  //   image: '/cement.webp',
+  //   bgColor: 'oklch(0.16 0.05 139.95)',
+  //   features: [
+  //     { title: 'High capacity cement production', description: 'Addressing Ethiopia`s growing demand for building materials' },
+  //     { title: 'Strategic Investment', description: 'Strengethning infrastructure and urban development' },
+  //     { title: 'State-of-the-art manufatcuring', description: 'Ensuring quality and efficiency' },
+  //   ],
+  //   path: '#'
+  // },
   {
     id: 'mining',
     title: 'BINGET Mining',
@@ -277,7 +277,7 @@ export default function HomePage() {
               key={div.id}
               id={div.id}
               ref={(el) => (sectionRefs.current[div.id] = el)}
-              className={`p-2 lg:${(index+1) % 3 !== 0 ? 'w-1/2' : 'w-full'} sm:w-full`}
+              className={`p-2 lg:${(index+1) % 3 !== 1 ? 'w-1/2' : 'w-full'} sm:w-full`}
             >
               <motion.div
                 transition={{ duration: 0.8 }}
