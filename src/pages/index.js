@@ -25,13 +25,13 @@ const divisions = [
   },
   {
     id: 'realstate',
-    title: 'BINGET Real Estate',
-    description: ' G Y Real Estate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
+    title: 'BINGET Realestate',
+    description: ' G Y Realestate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
     image: '/gy.jpg',
     bgColor: 'oklch(0.46 0.09 78.42)',
     features: [
       { title: 'Strategic Locations', description: ' Our developments are located in Addis Ababa’s most sought-after areas, including Bole, 22 Golagul, and other emerging commercial hubs' },
-      { title: ' Expanding Portfolio', description: 'We continue to acquire and develop properties that elevate the city’s real estate standards' },
+      { title: ' Expanding Portfolio', description: 'We continue to acquire and develop properties that elevate the city’s Realestate standards' },
       { title: '  Sustainable & Modern Designs', description: 'Our projects are designed to meet global standards in luxury, efficiency, and sustainability' },
     ],
     path: '#'
@@ -233,14 +233,14 @@ export default function HomePage() {
             </h2>
             <p className="text-lg text-gray-700 ">
               Binget Group is a leading multi-industry investment company driving innovation and economic
-              growth in Ethiopia. With a strong presence in automotive, real estate, technology, finance, and
+              growth in Ethiopia. With a strong presence in automotive, Realestate, technology, finance, and
               exports, we are committed to delivering high-quality, technology-driven solutions that enhance
               businesses and communities.
             </p>
             <p className="text-lg text-gray-700 ">
               Binget Group is a diversified, innovation-driven conglomerate shaping Ethiopia’s future. Our
               strategic investments, customer-focused approach, and technology-driven solutions
-              position us as a leader in automotive, real estate, technology, finance, security, cement,
+              position us as a leader in automotive, Realestate, technology, finance, security, cement,
               mining, and exports.
               With a clear vision, strong leadership, and a focus on sustainable growth, Binget Group is
               transforming industries and empowering Ethiopia’s economic future

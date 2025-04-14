@@ -10,7 +10,7 @@ const sections = {
   about: {
     title: "Our Story",
     content:
-      "Founded in 1995, BINGET Group has grown into a diversified enterprise with interests in automotive, technology, real estate, mining, and more. Our vision is to innovate for a better tomorrow.",
+      "Founded in 1995, BINGET Group has grown into a diversified enterprise with interests in automotive, technology, Realestate, mining, and more. Our vision is to innovate for a better tomorrow.",
   },
   products: {
     title: "Our Products",
@@ -18,7 +18,7 @@ const sections = {
   },
   services: {
     title: "What We Offer",
-    items: ["Import & Export", "Real Estate Development", "IT Consulting", "Industrial Mining"],
+    items: ["Import & Export", "Realestate Development", "IT Consulting", "Industrial Mining"],
   },
   unique: {
     title: "Why Choose BINGET Group?",

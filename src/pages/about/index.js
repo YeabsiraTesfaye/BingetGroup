@@ -16,10 +16,10 @@ const companies = [
     },
     {
         id: 2,
-        name: "BINGET Real Estate",
-        description: "G Y Real Estate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence.",
+        name: "BINGET Realestate",
+        description: "G Y Realestate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence.",
         image: "gy.jpg",
-        path: '/divisions/realestate'
+        path: '#'
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const companies = [
         name: "Binget Export",
         description: " Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion",
         image: "/export.jpg",
-        path: '/divisions/importExport'
+        path: '#'
     },
     {
         id: 8,
@@ -62,7 +62,7 @@ const companies = [
         name: "Binget Mining",
         description: "Binget Mining is committed to shaping the future of mining by focusing on sustainability, technological innovation, and community growth. As a leading player in the mining industry, we pride ourselves on delivering high-quality resources while preserving the environment and contributing to the local communities where we operate.",
         image: "/mining.jpg",
-        path: '/divisions/mining'
+        path: '#'
     },
 ];
 
@@ -91,7 +91,7 @@ export default function About() {
                     <h1 className="text-5xl font-bold">About Us</h1>
                     <p className="mt-4 text-lg">
                         Binget Group is a leading multi-industry investment company driving innovation and economic
-                        growth in Ethiopia. With a strong presence in automotive, real estate, technology, finance, and
+                        growth in Ethiopia. With a strong presence in automotive, Realestate, technology, finance, and
                         exports, we are committed to delivering high-quality, technology-driven solutions that enhance
                         businesses and communities.
                     </p>
@@ -134,7 +134,7 @@ export default function About() {
                             <h3 className="text-xl font-semibold text-[#B49C68]">{title}</h3>
                             <p className="mt-2 text-gray-600">
                                 {title === "Mission" && " To drive sustainable economic growth by delivering innovative, high-quality, and technology-driven solutions across multiple industries, enhancing the lives of individuals and businesses while contributing to national development."}
-                                {title === "Vision" && "To be a leading multi-industry investment powerhouse in Ethiopia and beyond, known for excellence, innovation, and transformative business solutions that shape the future of automotive, real estate, technology, finance, and exports"}
+                                {title === "Vision" && "To be a leading multi-industry investment powerhouse in Ethiopia and beyond, known for excellence, innovation, and transformative business solutions that shape the future of automotive, Realestate, technology, finance, and exports"}
                                 {title === "Values" && "Integrity, Excellence, and Innovation drive us forward."}
                             </p>
                         </motion.div>
