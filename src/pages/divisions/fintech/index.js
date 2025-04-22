@@ -30,7 +30,10 @@ const sections = {
   products: {
     title: "Our Products",
     items: [
-      { image: "/two.png", title: "Mobile Money", description: "Our cutting-edge fintech platform empowers businesses with a no-code environment and an API-first approach, ensuring seamless integration and customization. Whether you're an individual, a business, or an enterprise, our platform provides dedicated portals tailored to your needs.", redirect: '/projects/mobileMoney' },
+      { image: "/two.webp", title: "Customer App", description: "The mobile customer app offers a range of financial services, including secure money transfers, mobile top-ups, merchant payments, wallet-to-bank transfers, and cash withdrawals. Users can also request money, make donations, and send domestic remittances, providing a seamless and convenient way to manage everyday financial transactions.", redirect: '/projects/mobileMoney' },
+      { image: "/merchant1.png", title: "Merchant App", description: "The merchant app enables businesses to accept payments, manage transactions, and transfer funds seamlessly. It offers features like receiving merchant payments, processing refunds, transferring funds to the bank, and managing assistants and tellers. Merchants can also withdraw money and handle payments between enterprises, merchants, and customers efficiently.", redirect: '/projects/mobileMoney' },
+      { image: "/agent.png", title: "Agent App", description: "The agent app allows agents to facilitate customer transactions, including cashing in and out, processing domestic remittances, and transferring funds between agents and sub-agents. It also enables customer onboarding, KYC updates, managing sub-agents, and handling commission balances, providing a comprehensive solution for managing agent network activities.", redirect: '/projects/mobileMoney' },
+      { image: "/mac.png", title: "Enterprise Portal", description: "The enterprise portal enables businesses to manage large-scale financial operations, including bulk and single salary payments, mobile top-ups, and transfers to merchants or banks. It also allows enterprises to withdraw funds, providing a streamlined platform for managing employee payments and business transactions efficiently.", redirect: '/projects/mobileMoney' },
      
     ]
   },

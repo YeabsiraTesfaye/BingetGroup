@@ -30,7 +30,7 @@ export default function Footer() {
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/automotive')}>BINGET Automotive</li>
             <li className="cursor-pointer" onClick={()=>router.push('#')}>BINGET Realestate</li>
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/tech')}>BINGET Tech</li>
-            <li className="cursor-pointer" onClick={()=>router.push('#')}>Export</li>
+            <li className="cursor-pointer" onClick={()=>router.push('#')}>BINGET Export</li>
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/microfinance')}>BINGET Microfinance</li>
             <li className="cursor-pointer" onClick={()=>router.push('/divisions/fintech')}>BINGETBirr</li>
             {/* <li className="cursor-pointer" onClick={()=>router.push('#')}>Cement</li> */}
