@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ContactUs from "@/components/contactUs";
 import { motion } from "framer-motion";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
@@ -92,6 +92,7 @@ const sections = {
 
 export default function CompanyProfilePage() {
   const router = useRouter()
+    const ref = useRef()
 
   const [expandedProduct, setExpandedProduct] = useState(null);
   const [center, setCenter] = useState({ lat: 8.991741, lng: 38.780423 });
@@ -131,15 +132,15 @@ export default function CompanyProfilePage() {
             <h2 className="text-4xl font-bold mb-2">{sections.hero.title}</h2>
             <p className="mb-4 text-lg text-gray-600">{sections.hero.subtitle}</p>
             <button
-              onClick={() => window.open('https://bingetbirr.com', '_blank', 'noopener,noreferrer')}
-              className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
-            >
-              Visit Website
-            </button>
+                            onClick={() => ref.current.scrollIntoView({ behavior: 'smooth' })}
+                            className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
+                        >
+                            Get Started
+                        </button>
           </motion.div>
         </div>
       </section>
-      <section className=" px-4 bg-gray-100">
+      <section ref={ref} className=" px-4 bg-gray-100">
         <AnimatedSection title={sections.about.title}>
           {sections.about.contents.map(x => (
             <p className="max-w-3xl mx-auto text-justify text-lg mb-2">{x}</p>
