@@ -22,7 +22,7 @@ const sections = {
     image: "/b_m.jpeg",
   },
   about: {
-    title: "Our Company",
+    title: "Company Profile",
     contents: [
       "Binget Microfinance Institutions S.C, established in 2018, works towards empowering individuals and businesses with digital financial solutions, fostering financial inclusion and supporting Ethiopia's digital economy.",
       "We launched Bingetbirr mobile banking in 2020 after a NBE directive. Licensed in 2023, it offers a digital wallet for deposits, withdrawals, transfers, remittances, top-ups, and bill payments."

@@ -26,7 +26,7 @@ const divisions = [
   {
     id: 'realstate',
     title: 'BINGET Realestate',
-    description: ' G Y Realestate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
+    description: ' BINGET Realestate is committed to shaping Ethiopia’s urban landscape by developing iconic, high-value properties in prime locations. Our properties cater to high-end residential, commercial, and mixed-use developments that reflect modern architectural excellence',
     image: '/gy.jpg',
     bgColor: 'oklch(0.46 0.09 78.42)',
     features: [
@@ -54,7 +54,7 @@ const divisions = [
   },
   {
     id: 'import/export',
-    title: 'Import',
+    title: 'Export',
     description: 'Binget Export is a key player in Ethiopia’s export market, focusing on premium coffee and high-quality oil products. Our business is built on the principles of sustainability, ethical sourcing, and global market expansion.',
     image: '/export.jpg',
     bgColor: 'oklch(0.46 0.09 78.42)',
@@ -89,7 +89,7 @@ const divisions = [
       { title: 'High-Quality Ethiopian Coffee', description: ' Exporting specialty-grade coffee that competes in global markets' },
       { title: 'Oil Product Exports', description: 'Providing high-quality agricultural oil products with strict quality control standards' },
     ],
-    path: '/divisions/importExport'
+    path: '/divisions/fintech'
   },
   // {
   //   id: 'cement',

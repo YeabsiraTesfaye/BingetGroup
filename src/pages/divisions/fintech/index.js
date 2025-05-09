@@ -22,7 +22,7 @@ const sections = {
     image: "/binget_birr.png",
   },
   about: {
-    title: "Our Company",
+    title: "Company Profile",
     contents: [
       " BingetBirr is at the forefront of Ethiopia’s cashless revolution, making digital transactions more accessible, reliable, and scalable. To provide wallet banking services, the company has acquired a feature-rich digital wallet platform called Bingebirr, which has all the basic and custom wallet services. The platform provides secured, scalable, robust, and flexible mobile financial services that allow digital wallet companies to efficiently roll out and scale mobile money services by offering a wide range of use cases for consumers through multiple transaction channels"
     ]

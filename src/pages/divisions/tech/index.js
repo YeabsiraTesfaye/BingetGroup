@@ -22,7 +22,7 @@ const sections = {
     image: "/tech.png",
   },
   about: {
-    title: "Our Company",
+    title: "Company Profile",
     contents: [
       "Binget Tech is the technology division of Binget Group, a diversified private limited company established in 2018 in Ethiopia. Initially focused on import and export activities, Binget Group expanded into the fintech sector following the National Bank of Ethiopia's directive in April 2020, which permitted non-bank entities to offer e-payment services. This strategic move led to the creation of Binget Tech, aiming to provide innovative digital financial solutions to enhance financial inclusion in Ethiopia",
       "Binget Tech's commitment to technological innovation and financial inclusion is evident in its efforts to provide secure, efficient, and user-friendly digital financial services. By leveraging advanced technology and strategic partnerships, Binget Tech aims to play a pivotal role in transforming Ethiopia's financial landscape and promoting economic growth."
